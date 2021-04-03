@@ -12,7 +12,7 @@ let generateTarget = function () {
         alpha: 0.4
     };
 };
-for (var i = 0; i < targetNumber; i++) {
+for (var n = 0; n < targetNumber; n++) {
     targets.push(generateTarget());
 }
 
@@ -97,10 +97,11 @@ function initializeCanvas() {
     }, false);
 }
 
-var Main = new function () {
+
+{
     initializeCanvas();
 
-    function runloop(timestamp) {
+    function runloop() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         drawTarget();
